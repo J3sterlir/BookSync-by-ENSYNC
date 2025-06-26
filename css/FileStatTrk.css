@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-color: #002d58;
+    --hover-clr: #3097ff3d;
+    --line-clr: #4c7db6;
+    --secondary-clr: #93f8ff;
+    --accent-clr: #00116e;
+    --Maintext-clr: #fff;
+    --button-clr1: #6db1ff;
+    --button-clr2: #3392ff;
+    --button-clr3: #ff9152;
+    --button-clr4: #9affd5;
+}
+
+#tracker-header-container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    margin-bottom: 40px; margin-top: -20px;
+    padding: min(1.5em, 15%);
+    padding-bottom: 1.5rem;
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.File-container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    margin-bottom: 20px; margin-top: 45px;
+    padding: min(1em, 10%);
+    padding-top: 25px;
+}
+.button {
+    background: var(--accent-clr);
+    color: aliceblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px; height: 40px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+.button-container{
+    margin-top: -45px;
+}
+
+.fixed-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+  
+.fixed-table th, .fixed-table td {
+    border: none;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#START{
+    background-color: var(--button-clr1);
+    color: black;
+}
+
+#EDIT{
+    background-color: var(--button-clr2);
+    color: black;
+}
+
+#UPDATE{
+    background-color: var(--button-clr4);
+    color: black;
+}
+
+#DELETE{
+    background-color: var(--button-clr3);
+    color: black;
+}
+
+#START:hover{
+    background-color: #3392ff;
+    color: black;
+}
+
+#EDIT:hover{
+    background-color: #638fc2;
+    color: black;
+}
+
+#UPDATE:hover{
+    background-color: #60ffbd;
+    color: black;
+}
+
+#DELETE:hover{
+    background-color: #ff5613;
+    color: black;
+}
+

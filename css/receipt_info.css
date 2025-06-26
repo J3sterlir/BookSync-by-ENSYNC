@@ -1,0 +1,205 @@
+.hidden {
+    display: none;
+}
+
+.receipt-form {
+    max-width: 5000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.desc {
+    color: rgba(0, 45, 88, 0.938);
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.0rem;
+    margin-right: 10px;
+    color: rgba(0, 45, 88, 0.938);
+}
+
+select, input[type="date"], input[type="text"], input[type="password"], input[type="number"] {
+    margin-right: 10px;
+    padding: 10px; /* Increased padding for better touch targets */
+    font-size: 1em;
+    width: calc(100% - 22px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+    border-color: var(--accent-clr);
+    outline: none;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-family: Montserrat; /* Ensure font-family is applied */
+    background-color: var(--accent-clr);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--hover-clr);
+    transform: translateY(-2px);
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.tab-link {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: none;
+    margin-right: 5px;
+    font-weight: 600;
+    color: WHITE;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-link:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-link.active {
+    background-color: #fff;
+    border-color: #ccc #ccc #fff;
+    color: #0a3869;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+    display: none; /* Hide all tab contents by default */
+    padding: 20px; /* Added padding for content */
+    background-color: #f9f9f9; /* Background color for tab content */
+    border-radius: 8px; /* Rounded corners for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.tab-content.active {
+    display: block; /* Show active tab content */
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    color: black;
+    text-align: left;
+}
+
+/* Table header styling */
+thead {
+    background-color: hsla(195, 100%, 37%, 0.795); /* Green background for the header */
+    color: white; /* White text color */
+}
+
+th {
+    padding: 12px 15px; /* Padding for header cells */
+}
+
+/* Table body styling */
+tbody tr {
+    background-color: #f9f9f9; /* Light gray background for rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Slightly darker gray for even rows */
+}
+
+td {
+    padding: 12px 15px; /* Padding for data cells */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px; /* Smaller font size on small screens */
+    }
+}
+
+button {
+margin-top: 20px;
+    padding: 10px 15px;
+    font-family: Montserrat;
+    background-color: var(--accent-clr);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.edit {
+    background-color: #1976d2;
+}
+button.edit:hover {
+    background-color: #0d47a1;
+}
+button.delete {
+    background-color: #d32f2f;
+}
+button.delete:hover {
+    background-color: #9a0007;
+}
+button.save {
+    background-color: #388e3c;
+}
+button.save:hover {
+    background-color: #1b5e20;
+}
+button.cancel {
+    background-color: #757575;
+}
+button.cancel:hover {
+    background-color: #494949;
+}
+
+#monthly-options {
+    display: flex;
+    gap: 1em; /* space between inputs */
+    align-items: center;
+}
+#monthly-options .date-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#annual-options, #quarterly-options, #monthly-options, #custom-options {
+    margin-bottom: 1em;
+}
+.date-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-color: #002d58;
+    --hover-clr: #3097ff3d;
+    --line-clr: #4c7db6;
+    --secondary-clr: #93f8ff;
+    --accent-clr: #00116e;
+    --Maintext-clr: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Montserrat;
+    line-height: 1.5rem;
+    overflow-x: hidden;
+}
+#Nav-container{
+    background: #ffffff;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.83) 82%, rgba(255, 255, 255, 0) 100%);
+    border-radius: none;
+    margin-bottom: 50px; margin-top: -30.5px; margin-left: -32px;
+    position: sticky;
+    top:0;
+    padding: min(5em, 1.5%);
+    width: 96%;
+}
+#Nav-container h1{
+    color: var(--background-color);
+    text-align: center;
+}
+.section1{
+    position: sticky;
+    top:0;
+}

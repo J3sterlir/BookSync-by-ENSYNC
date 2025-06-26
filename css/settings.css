@@ -1,0 +1,87 @@
+.settings-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-family: Montserrat;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #505050;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: var(--accent-clr);
+    outline: none;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: Montserrat;
+    background-color: var(--accent-clr);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+input[type="submit"]:hover {
+    background-color: var(--hover-clr);
+    transform: translateY(-2px);
+}
+
+.tabs {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 0px;
+  }
+.tab-link {
+      padding: 12px 20px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
+      margin-right: 5px;
+      font-weight: 600;
+      color: white;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .tab-link:hover {
+      background-color: #e0e0e0;
+  }
+  .tab-link.active {
+      background-color: #fff;
+      border-color: #ccc #ccc #fff;
+      color: #0a3869;
+      font-weight: 700;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .tab-content {
+      display: none;
+      padding: 0;
+  }
+  .tab-content.active {
+      display: block;
+      margin-top: 20px;;
+  }
+
+  h3 {
+    color: #333;
+  }
+  h2 {
+    color: white;
+  }

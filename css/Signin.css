@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-color: rgb(0, 45, 88);
+    --hover-clr: #3097ff3d;
+    --line-clr: #4c7db6;
+    --secondary-clr: #93f8ff;
+    --accent-clr: #00116e;
+    --Maintext-clr: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle,rgba(0, 45, 88, 0.681) 0%, rgba(0, 45, 88, 0.714) 50%, rgb(0, 45, 88) 100%), url("../img/BG_IMAGE.avif");
+    backdrop-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+nav h1{
+    font-family: "Montserrat", sans-serif;
+}
+
+.titillium-web-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.MainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-box {
+    width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    background: linear-gradient(0deg,rgb(191, 240, 255) 0%, rgb(52, 105, 155) 100%);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.Login {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    padding-bottom: 20px;
+    margin-top: -20px;
+    text-shadow: rgba(0, 0, 0, 0.493) 0 0 1px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    background: linear-gradient(90deg,rgba(36, 107, 173, 0.222) 55%, rgba(0, 45, 88, 0)90%);
+    border-radius: 10px;
+    padding: 7px;
+    width: 90%;
+    font-family: "Montserrat", sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px; /* Increased padding for better spacing */
+    margin-top: 0px; /* Added more margin for better separation */
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Buttons and links */
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e4ead;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #3d8bd9;
+}
+
+.forgot-password,
+.Client {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+
+.forgot-password:hover,
+.Client:hover {
+    text-decoration: underline;
+}
+
+#Missing{
+    background-color: rgba(255, 0, 0, 0.24);
+    position: relative;
+    border-radius: 10px; border: solid; border-width: 2px; border-color: rgba(255, 0, 0, 0.045);
+    color: white;
+    width: 300px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    margin: auto;
+    margin-top: -20rem;
+    font-family: "Montserrat", sans-serif;
+}
+#connected{
+    color: rgb(0, 255, 0);
+    position: absolute;
+    background-color: rgba(251, 255, 0, 0.149);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-top: 48.2%;
+    font-family: "Montserrat", sans-serif;
+}
+#disconnected{
+    color: rgb(255, 0, 0);
+    position: absolute;
+    margin-top: 45%;
+    background-color: rgba(110, 38, 0, 0.475);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    font-family: "Montserrat", sans-serif;
+}
+#disconnected_Status{
+    color: rgb(255, 0, 0);
+    position: absolute;
+    margin-top: 43%;
+    background-color: rgba(110, 38, 0, 0.475);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    font-family: "Montserrat", sans-serif;
+}
+@media (max-width:1119px) {
+    #connected, #disconnected, #disconnected_Status {
+        margin-top:26%;
+    }
+}
+@media (max-width:1124px) {
+    #connected, #disconnected, #disconnected_Status{
+        margin-top:100px;
+        margin-left: 36%;
+    }
+}
+@media (max-width:750px) {
+    #connected, #disconnected, #disconnected_Status{
+        margin-top:100px;
+        margin-left: 26%;
+    }
+}
+@media (max-width:650px) {
+    #connected, #disconnected, #disconnected_Status{
+        margin-top:100px;
+        margin-left: 26%;
+    }
+}
+@media (max-width:500px) {
+    #connected, #disconnected, #disconnected_Status{
+        margin-top:100px;
+        margin-top:100px;
+        margin-left:26%;
+    }
+}
+@media (max-width:200px) {
+    #connected, #disconnected, #disconnected_Status{
+        margin-top:100px;
+        margin-top:100px;
+        margin-left: 10%;
+        width: auto;
+    }
+}

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-color: #002d58;
+    --hover-clr: hsla(183, 30%, 77%, 0.836);;
+    --line-clr: #4c7db6;
+    --secondary-clr: #93f8ff;
+    --accent-clr: #00116e;
+    --Maintext-clr: #fff;
+    --Maintext-drk: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Montserrat;
+}
+body{
+    background-color: var(--background-color);
+}
+header{
+    position: sticky;
+    top: 0;
+}
+.clientnnav{
+    background: #ffffff;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.83) 82%, rgba(255, 255, 255, 0) 100%);
+    border-radius: none;
+    margin-bottom: 50px; margin-top: -30.5px; margin-left: -32px;
+    position: sticky;
+    top:0;
+    padding: min(5em, 1.5%);
+    width: 96%;
+}
+.container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    padding: min(3em, 15%);
+    margin-top: 20px;
+    color: var(--Maintext-clr);
+}
+.flexcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-contain{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    color: var(--Maintext-clr);
+    width: 90vw;
+    margin: 25px;
+    padding: 2rem;
+}
+
+table,td{
+    border:1px solid var(--line-clr);
+}
+th{
+    border:1px solid var(--Maintext-drk);
+}
+table{
+    margin-top: 20px;
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: var(--Maintext-clr);
+}
+th, td {
+    padding: 20px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--line-clr);
+}
+th {
+    background-color: hsla(195, 100%, 37%, 0.795);
+    font-weight: bold;
+    color: var(--Maintext-clr);
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.no-receipts {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+#logoutbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: fit-content;
+    padding-right: 20px; padding-left: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 100px 7;
+    background-color: hsl(195, 100%, 37%);
+    cursor: pointer;
+}
+
+#logoutbtn:hover{
+    background-color: hsla(183, 30%, 77%, 0.836);
+    color: black;
+}
+
+#logoutform svg{
+    padding: .57em;
+    align-items: center;
+}
+
+.logout_container{
+    padding: 0px;
+}

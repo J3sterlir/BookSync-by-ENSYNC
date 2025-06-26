@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-color: #002d58;
+    --hover-clr: hsla(183, 30%, 77%, 0.836);;
+    --line-clr: #4c7db6;
+    --secondary-clr: #93f8ff;
+    --accent-clr: #00116e;
+    --Maintext-clr: #fff;
+    --Maintext-drk: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Montserrat;
+}
+body{
+    background-color: var(--background-color);
+}
+header{
+    position: sticky;
+    top: 0;
+}
+.adminnav{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--Maintext-clr);
+    color: var(--background-color);
+    width: auto;
+    text-align: center;
+
+}
+.adminnav h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+.formbutton{
+    margin-bottom: 5px;
+    width: max-content;
+}
+.header-contain{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    color: var(--Maintext-clr);
+    width: 90vw;
+    margin: 25px;
+    padding: 2rem;
+}
+.container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    padding: min(3em, 15%);
+    margin-top: 20px;
+    color: var(--Maintext-clr);
+}
+.flexcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexcontainer > .container{
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    padding: 40px;
+    font-size: 1rem;
+    margin: 20px;
+    gap: 20px;
+    color: var(--Maintext-clr);
+    width: auto;
+}
+
+.search-container {
+    border: 1px solid var(--line-clr);
+    border-radius: 1em;
+    padding: min(1em, 10%);
+    padding-top: 25px;
+}
+
+#search-results {
+    margin-bottom: 10px;
+}
+
+.search-box {
+    display: flex;
+    width: auto;
+    margin-top: 10px;
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #2e4ead;
+    border-radius: 5px;
+    width: max-content;
+    margin-top: 10px;
+}
+
+#search-button:hover {
+    background-color: var(--hover-clr);
+}
+
+#logoutbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: fit-content;
+    padding-right: 20px; padding-left: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 100px 7;
+    background-color: hsl(195, 100%, 37%);
+    cursor: pointer;
+}
+
+#logoutbtn:hover{
+    background-color: hsla(183, 30%, 77%, 0.836);
+    color: black;
+}
+
+#logoutform svg{
+    padding: .57em;
+    align-items: center;
+}
+
+.logout_container{
+    padding: 0px;
+}
+table,th,td{
+    border:1px solid rgb(255, 255, 255);
+    
+}
+table{
+    margin-top: 20px;
+}
+
+/* new styles 
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        margin: 0; padding: 20px;
+        color: #333;
+    }
+    h1 {
+        text-align: center;
+        color: #0066cc;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+    }
+*/
+    form {
+        margin-bottom: 30px;
+    }
+    form label {
+        display: block;
+        margin: 12px 0 5px 0;
+        font-weight: 600;
+        color: var(--Maintext-clr);
+    }
+
+    select {
+    border: 2px solid #ddd;
+    background: #eee;
+    padding: 10px;
+    transition: 0.4s;
+    appearance: base-select;
+    color: var(--Maintext-drk);
+    }
+
+    select:hover,
+    select:focus {
+    background: #ddd;
+    }
+
+    form input[type=text],
+    form input[type=email],
+    form input[type=password] {
+        width: 100%;
+        padding: 10px 14px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: 0.3s border-color ease-in-out;
+    }
+    form input[type=text]:focus,
+    form input[type=email]:focus,
+    form input[type=password]:focus {
+        border-color: var(--hover-clr);
+        border-width: 3px;
+        outline: none;
+    }
+    form .checkbox-label {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+    }
+    form input[type=checkbox] {
+        margin-right: 8px;
+        width: 18px; height: 18px;
+        accent-color: #0066cc;
+        cursor: pointer;
+    }
+    .form-button {
+        margin-top: 18px;
+        background-color: hsl(195, 100%, 37%);;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .form-button:hover {
+        background-color:var(--hover-clr);
+    }
+    .message {
+        padding: 12px 18px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .message.success {
+        background-color: #dff0d8;
+        color: #3c763d;
+        border: 1px solid #d0e9c6;
+    }
+    .message.error {
+        background-color: #f2dede;
+        color: #a94442;
+        border: 1px solid #ebccd1;
+    }
+    
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+}
+
+table th {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+table tr:not(:last-child) td {
+  border-bottom: 1px solid #e9ecef;
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(0, 102, 204, 0.05);
+}
+
+table tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Modern Button Styles */
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--line-clr);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+a.button:hover {
+  background-color: var(--hover-clr);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a.button:active {
+  transform: translateY(0);
+}
+
+/* Action cells */
+.actions {
+  white-space: nowrap;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table th, table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  a.button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
+
+    /* Search bar styles */
+    .search-bar {
+        margin-bottom: 30px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .search-bar input[type=text] {
+        flex-grow: 1;
+        padding: 10px 14px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        transition: 0.3s border-color ease-in-out;
+    }
+    .search-bar input[type=text]:focus {
+        border-color: var(--line-clr);
+        outline: none;
+    }
+    .search-bar button {
+        background-color: hsl(195, 100%, 37%);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+    .search-bar button:hover {
+        background-color: var(--hover-clr);
+    }
+    .search-bar .clear-btn {
+        background-color: var(--line-clr);
+    }
+    .search-bar .clear-btn:hover {
+        background-color: var(--hover-clr);
+    }
