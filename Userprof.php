@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id']) ||
     session_destroy();
     
     // Redirect to login with error message
-    header("Location: index.php?error=session_invalid");
+    header("Location: Login.php?error=session_invalid");
     exit();
 }
 

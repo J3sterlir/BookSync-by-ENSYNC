@@ -1,122 +1,67 @@
-<?php
-include("database.php");
-
-// Initialize session FIRST
-session_start();
-
-try {
-    $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-    if (!$conn) {
-        throw new mysqli_sql_exception("Connection failed: " . mysqli_connect_error());
-    }
-    //echo "<div id='connected'>Database Status: Online</div>";
-} catch (mysqli_sql_exception $e) {
-    echo "<div id='disconnected'>Database Connection Error: " . $e->getMessage() . "<br></div>";
-    exit(); // Stop execution if the database connection fails
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JMCYK Login</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/Signin.css">
-</head>
-<body>
-
-    <header style="">
-        <nav class="adminnav" style="padding-top: 20px; padding-bottom: 20px; background: #ffffff;
-background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 0.58) 100%); color: var(--background-color); width: auto; text-align: center;">
-            <h1>JMCYK Client & Receipts Management System</h1>
-        </nav>
-    </header>
-
-    <div class="MainContainer">
-        <div class="login-box">
-            <br><br>
-            <h2 class="Login">LOGIN</h2>
-            <hr>
-            <br>
-            <form id="EmployeeLogin" action="" method="post" novalidate>
-                <label for="Username">Username:</label>
-                <input type="text" id="Username" name="Username" placeholder="Username" required><br><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="●●●●●●●●●●" required>
-
-                <br><br>
-                <input type="submit" class="btn" name="login" value="Log In">
-                <br><br>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
-
-<?php
-if (isset($_POST["login"])) {
-    // Sanitize inputs
-    $username = filter_input(INPUT_POST, "Username", FILTER_SANITIZE_SPECIAL_CHARS);
-    $password = $_POST['password'];
-    
-    // Prepared statement to prevent SQL injection
-    $stmt = $conn->prepare("SELECT users.*, user_types.type as role 
-                           FROM users 
-                           JOIN user_types ON users.type_id = user_types.id 
-                           WHERE username = ? AND is_active = 1");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    if (!empty($username) && !empty($password)) {
-        if ($result->num_rows > 0) {
-            $user = $result->fetch_assoc();
-            
-            // Verify password using hashing
-            if (password_verify($password, $user['password'])) {
-                // Set session variables
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['username'] = $username;
-                $_SESSION['first_name'] = $user['name']; // Changed to 'name' based on your earlier structure
-                $_SESSION['role'] = $user['role'];
-                $_SESSION['logged_in'] = true;
-                
-                // Redirect based on role
-                switch ($user['role']) {
-                    case 'employee':
-                        header("Location: home.php");
-                        break;
-                    case 'client':
-                        header("Location: clientside/clientview.php");
-                        break;
-                    case 'admin':
-                        header("Location: adminside/adminpage.php");
-                        break;
-                    default:
-                        echo '<div id="Missing">Unknown user role</div>';
-                }
-                exit();
-            } else {
-                echo '<div id="Missing">Invalid Password</div>';
-            }
-        } else {
-            echo '<div id="Missing">Username not found or account inactive</div>';
-        }
-    } else if (empty($username) && empty($password)) {
-        echo '<div id="Missing">Missing Username & Password</div>';
-    } else if (empty($username)) {
-        echo '<div id="Missing">Missing Username</div>';
-    } else if (empty($password)) {
-        echo '<div id="Missing">Missing Password</div>';
-    }
-    
-    $stmt->close();
-}
-
-// Close connection to the database
-$conn->close();
-?>
+<div style="width: 1920px; height: 1080px; position: relative">
+  <div style="width: 1920px; height: 3240px; left: 0px; top: 0px; position: absolute; background: linear-gradient(180deg, #001325 0%, #002D58 26%, #002D58 47%, #D9D9D9 100%)"></div>
+  <div style="width: 920px; height: 731px; left: 920px; top: 930px; position: absolute; transform: rotate(180deg); transform-origin: top left; background: linear-gradient(90deg, #82B7E9 0%, rgba(115, 115, 115, 0) 100%); box-shadow: 17px 18px 30.100000381469727px rgba(0, 0, 0, 0.25); border-top-left-radius: 422px; border-bottom-left-radius: 422px"></div>
+  <div style="width: 129.83px; height: 209.47px; left: 1361px; top: 1948.20px; position: absolute; background: black"></div>
+  <div style="width: 161.10px; height: 240.60px; left: 1345.45px; top: 1932.54px; position: absolute; background: black"></div>
+  <img style="width: 163.18px; height: 242.99px; left: 1344.20px; top: 1931.08px; position: absolute" src="https://placehold.co/163x243" />
+  <div style="width: 116.68px; height: 188.26px; left: 290.99px; top: 1267.62px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <div style="width: 144.78px; height: 216.24px; left: 271.88px; top: 1262.30px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <img style="width: 145.31px; height: 217.05px; left: 271.74px; top: 1262.22px; position: absolute; transform: rotate(-29deg); transform-origin: top left" src="https://placehold.co/145x217" />
+  <div style="width: 1920px; height: 650px; left: 0px; top: 1373px; position: absolute; background: white; box-shadow: 17px 18px 30.100000381469727px rgba(0, 0, 0, 0.25)"></div>
+  <div style="width: 442.14px; height: 228.24px; left: 1455.86px; top: 1929.49px; position: absolute; background: black"></div>
+  <div style="width: 473.34px; height: 259.33px; left: 1440.27px; top: 1913.90px; position: absolute; background: black"></div>
+  <img style="width: 474.58px; height: 260.88px; left: 1440.02px; top: 1913.19px; position: absolute" src="https://placehold.co/475x261" />
+  <div style="width: 394.09px; height: 293.69px; left: 1455.86px; top: 1864px; position: absolute; background: black"></div>
+  <div style="width: 425.27px; height: 324.77px; left: 1440.27px; top: 1848.40px; position: absolute; background: black"></div>
+  <img style="width: 426.68px; height: 326.48px; left: 1440.02px; top: 1847.60px; position: absolute" src="https://placehold.co/427x326" />
+  <div style="width: 397.36px; height: 205.15px; left: -29px; top: 1445.16px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <div style="width: 425.40px; height: 233.07px; left: -48.01px; top: 1439.80px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <img style="width: 426.52px; height: 234.46px; left: -48.26px; top: 1439.81px; position: absolute; transform: rotate(-29deg); transform-origin: top left" src="https://placehold.co/427x234" />
+  <div style="width: 354.37px; height: 262.97px; left: 8.60px; top: 1424.32px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <div style="width: 382.40px; height: 290.90px; left: -10.40px; top: 1418.95px; position: absolute; transform: rotate(-29deg); transform-origin: top left; background: black"></div>
+  <img style="width: 383.47px; height: 292.07px; left: -10.62px; top: 1418.91px; position: absolute; transform: rotate(-29deg); transform-origin: top left" src="https://placehold.co/383x292" />
+  <div style="width: 339px; height: 108px; left: 323px; top: 1531px; position: absolute; border-radius: 94px; border: 5px #002D58 solid"></div>
+  <div style="width: 363px; height: 108px; left: 916px; top: 1532px; position: absolute; border-radius: 94px; border: 5px #002D58 solid"></div>
+  <div style="width: 340px; height: 108px; left: 1466px; top: 1531px; position: absolute; border-radius: 94px; border: 5px #002D58 solid"></div>
+  <div style="width: 538px; height: 107px; left: 781px; top: 1788px; position: absolute; border-radius: 94px; border: 5px #002D58 solid"></div>
+  <div style="width: 374px; height: 117px; left: 194px; top: 1783px; position: absolute; border-radius: 94px; border: 5px #002D58 solid"></div>
+  <div style="width: 1920px; height: 130px; left: 0px; top: 1373px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #012D57; font-size: 55px; font-family: Menbere; font-weight: 700; word-wrap: break-word">FEATURES</div>
+  <div style="width: 1259px; left: 608px; top: 2261px; position: absolute; justify-content: center; display: flex; flex-direction: column"><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 700; word-wrap: break-word">BookSync by ENSYNC - A Bookkeeping Management System<br/></span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 400; word-wrap: break-word"><br/>A </span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Web application</span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 400; word-wrap: break-word"> with an integrated database designed to </span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 700; word-wrap: break-word">assist</span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 400; word-wrap: break-word"> Bookkeeping Services in </span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 700; word-wrap: break-word">sorting</span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 400; word-wrap: break-word"> and </span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 700; word-wrap: break-word">managing</span><span style="color: white; font-size: 41px; font-family: Menbere; font-weight: 400; word-wrap: break-word"> receipts efficiently.<br/><br/></span><span style="color: white; font-size: 36px; font-family: Menbere; font-weight: 400; word-wrap: break-word">The system will allow employees to enter receipt details and automatically generate a summary report of the receipts, categorized by month. This will help in determining the total amount of receipts within specific time periods, which is crucial for preparing accurate tax returns.</span></div>
+  <div style="width: 249px; height: 46px; left: 368px; top: 1560px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #083157; font-size: 31px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Manage Clients</div>
+  <div style="width: 312px; height: 46px; left: 222px; top: 1818px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #083157; font-size: 31px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Manage Employees</div>
+  <div style="width: 291px; height: 46px; left: 950px; top: 1561px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #083157; font-size: 31px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Organize Receipts</div>
+  <div style="width: 476px; height: 46px; left: 811px; top: 1818px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #083157; font-size: 31px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Automated Receipt Summary</div>
+  <div style="width: 210px; height: 46px; left: 1532px; top: 1561px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #083157; font-size: 31px; font-family: Menbere; font-weight: 700; word-wrap: break-word">Client Access</div>
+  <div style="width: 1920px; height: 189px; left: 0px; top: 3051px; position: absolute; background: #D9D9D9; box-shadow: 17px 18px 30.100000381469727px rgba(0, 0, 0, 0.25)"></div>
+  <div style="left: 24px; top: 3130px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: #1F456A; font-size: 20px; font-family: Menbere; font-weight: 400; word-wrap: break-word">BOOKSYNC By Ensync</div>
+  <div style="left: 136px; top: 2509px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 74px; font-family: Menbere; font-weight: 700; word-wrap: break-word">ABOUT</div>
+  <div style="width: 1115px; height: 665px; left: 734px; top: 211px; position: absolute; text-align: right; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 104px; font-family: Menbere; font-weight: 700; word-wrap: break-word">LEVEL UP <br/>YOUR <br/>BOOKKEEPING!</div>
+  <div style="width: 756px; height: 46px; left: 1093px; top: 811px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 30px; font-family: Menbere; font-weight: 700; word-wrap: break-word">ASSIST · SORT · MANAGE</div>
+  <div style="width: 836px; height: 130px; left: 38px; top: 69px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 38px; font-family: Menbere; font-weight: 700; word-wrap: break-word">By ENSYNC</div>
+  <div style="width: 836px; height: 130px; left: 32px; top: 0px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 76px; font-family: Menbere; font-weight: 700; word-wrap: break-word">BOOKSYNC</div>
+  <div style="width: 138px; height: 74px; left: 1345px; top: 28px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 35px; font-family: Menbere; font-weight: 400; word-wrap: break-word">About</div>
+  <div style="width: 238px; height: 64px; left: 1611px; top: 38px; position: absolute; background: rgba(0, 0, 0, 0); border-radius: 100px; border: 7px white solid"></div>
+  <div style="width: 181px; height: 24px; left: 1639px; top: 57px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 28px; font-family: Menbere; font-weight: 700; word-wrap: break-word">GET STARTED</div>
+  <div style="left: 1102px; top: 38px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 35px; font-family: Menbere; font-weight: 400; word-wrap: break-word">Features</div>
+  <div style="width: 136px; left: 868px; top: 38px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 35px; font-family: Menbere; font-weight: 400; word-wrap: break-word">Home</div>
+  <div style="width: 735px; height: 735px; left: 88px; top: 197px; position: absolute; overflow: hidden">
+    <div style="width: 146.55px; height: 237.42px; left: 11.12px; top: 415.03px; position: absolute; background: black"></div>
+    <div style="width: 176.43px; height: 267.29px; left: -3.79px; top: 400.13px; position: absolute; background: black"></div>
+    <img style="width: 177.83px; height: 269.62px; left: -4.30px; top: 398.69px; position: absolute" src="https://placehold.co/178x270" />
+    <div style="width: 498.77px; height: 258.50px; left: 118.11px; top: 394px; position: absolute; background: black"></div>
+    <div style="width: 528.66px; height: 288.47px; left: 103.17px; top: 378.97px; position: absolute; background: black"></div>
+    <img style="width: 530.63px; height: 289.70px; left: 101.82px; top: 378.61px; position: absolute" src="https://placehold.co/531x290" />
+    <div style="width: 146.55px; height: 237.42px; left: 577.33px; top: 82.55px; position: absolute; background: black"></div>
+    <div style="width: 176.43px; height: 267.29px; left: 562.39px; top: 67.61px; position: absolute; background: black"></div>
+    <img style="width: 177.83px; height: 268.19px; left: 562.19px; top: 67.40px; position: absolute" src="https://placehold.co/178x268" />
+    <div style="width: 498.77px; height: 258.50px; left: 118.12px; top: 82.49px; position: absolute; background: black"></div>
+    <div style="width: 528.66px; height: 288.47px; left: 103.17px; top: 67.55px; position: absolute; background: black"></div>
+    <img style="width: 530.63px; height: 289.70px; left: 101.82px; top: 67.40px; position: absolute" src="https://placehold.co/531x290" />
+    <div style="width: 444.59px; height: 332.74px; left: 118.08px; top: 319.73px; position: absolute; background: black"></div>
+    <div style="width: 474.46px; height: 362.63px; left: 103.14px; top: 304.79px; position: absolute; background: black"></div>
+    <img style="width: 476.14px; height: 364.27px; left: 101.82px; top: 304.04px; position: absolute" src="https://placehold.co/476x364" />
+    <div style="width: 444.86px; height: 331.52px; left: 172.06px; top: 82.53px; position: absolute; background: black"></div>
+    <div style="width: 474.70px; height: 361.40px; left: 157.13px; top: 67.58px; position: absolute; background: black"></div>
+    <img style="width: 476.14px; height: 362.84px; left: 156.32px; top: 67.40px; position: absolute" src="https://placehold.co/476x363" />
+  </div>
+</div>

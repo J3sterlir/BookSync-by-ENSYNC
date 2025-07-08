@@ -10,7 +10,7 @@ if (!$conn) {
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || !isset($_SESSION['logged_in']) || !isset($_SESSION['role']) || $_SESSION['logged_in'] !== true) {
     session_unset();
     session_destroy();
-    header("Location: index.php?error=session_invalid");
+    header("Location: Login.php?error=session_invalid");
     exit();
 }
 
