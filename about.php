@@ -54,13 +54,13 @@ include('Component/nav-head.php');
     <main>
         <section>
             <div id="Nav-container">
-                <h1>JMCYK Client & Receipts Management System</h1>
+                <h1>BookSync Client & Receipts Management System</h1>
             </div>
         </section>
 
         <div class="container">
             <h1>About</h1><br>
-            <p>JMCYK Bookkeeping Services, a company that manages financial transactions of taxpayers. Located at 2/F McKay Building, Zone 5, Corner Panganiban Drive, Concepcion Pequeña, Naga City and is owned by Mrs. Maricel M. Brioso</p>
+            <p>A Web application with an integrated database designed to assist Bookkeeping Services in sorting and managing receipts efficiently. The system will allow employees to enter receipt details and automatically generate a summary report of the receipts, categorized by month. This will help in determining the total amount of receipts within specific time periods, which is crucial for preparing accurate tax returns.</p>
         </div>
     </main> 
 </body>

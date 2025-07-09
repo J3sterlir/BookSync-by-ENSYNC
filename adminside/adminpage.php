@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id']) ||
     session_destroy();
     
     // Redirect to login with error message
-    header("Location: ../index.php?error=session_invalid");
+    header("Location: ../Login.php?error=session_invalid");
     exit();
 }
 
@@ -33,7 +33,7 @@ if (isset($_POST["logout"])) {
         );
     }
     session_destroy();
-    header("Location: ../index.php");
+    header("Location: ../Login.php");
     exit();
 }
 
@@ -162,7 +162,7 @@ function validateForm() {
 <body>
     <header>
         <nav class="adminnav">
-            <h1>JMCYK Admin Page</h1>
+            <h1>BookSync Admin Panel</h1>
         </nav>
     </header>
 

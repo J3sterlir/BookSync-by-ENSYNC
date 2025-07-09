@@ -114,7 +114,7 @@ include('Component/nav-head.php');
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Settings - JMCYK Client Management System</title>
+    <title>Settings - BookSync Client Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/Dashboard.css" />
     <link rel="stylesheet" href="css/TopNav.css" />
@@ -132,7 +132,7 @@ include('Component/nav-head.php');
     <main>
         <section>
             <div id="Nav-container">
-                <h1>JMCYK Client & Receipts Management System</h1>
+                <h1>BookSync Client & Receipts Management System</h1>
             </div>
         </section>
 
@@ -178,7 +178,7 @@ include('Component/nav-head.php');
                 <h2>Terms & Conditions</h2>
                 <br>
                 <p>
-                    Welcome to JMCYK Client Management System. By using our services, you agree to comply with the following terms and conditions:
+                    Welcome to BookSync Client Management System. By using our services, you agree to comply with the following terms and conditions:
                     <br>
                     <br>
                     <ul>
@@ -195,7 +195,7 @@ include('Component/nav-head.php');
                 <h2>Help and FAQ's</h2>
                 <br>
                 <p>
-                    JMCYK Client Management System v1.0<br />
+                    BookSync Client Management System v1.0<br />
                     Developed by Lirag-Madera.<br />
                     For support, contact: Maricel M. Brioso<br /><br />
                     <strong>Frequently Asked Questions:</strong>

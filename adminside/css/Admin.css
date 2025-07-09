@@ -188,7 +188,7 @@ table{
     form input[type=text],
     form input[type=email],
     form input[type=password] {
-        width: 100%;
+        width: 50%;
         padding: 10px 14px;
         border-radius: 6px;
         border: 1px solid #ccc;
@@ -385,3 +385,19 @@ a.button:active {
     .search-bar .clear-btn:hover {
         background-color: var(--hover-clr);
     }
+
+.forgot-password:hover,
+.Client:hover {
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

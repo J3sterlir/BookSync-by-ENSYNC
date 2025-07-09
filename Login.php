@@ -21,7 +21,7 @@ try {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JMCYK Login</title>
+    <title>BookSync Login</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/Signin.css">
@@ -47,8 +47,9 @@ background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="●●●●●●●●●●" required>
-
+                
                 <br><br>
+                <label class="label-reg" for="password">Don't Have An Account? <a href="Register.php"><b>Register</b></a></label>
                 <input type="submit" class="btn" name="login" value="Log In">
                 <br><br>
             </form>

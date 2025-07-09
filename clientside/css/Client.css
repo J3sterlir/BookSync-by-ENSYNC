@@ -33,6 +33,9 @@ header{
     padding: min(5em, 1.5%);
     width: 96%;
 }
+.clientnnav h1{
+    margin-left: 65px;
+}
 .container{
     border: 1px solid var(--line-clr);
     border-radius: 1em;

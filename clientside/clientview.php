@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id']) ||
     session_destroy();
     
     // Login err handling
-    header("Location: ../index.php?error=session_invalid");
+    header("Location: ../Login.php?error=session_invalid");
     exit();
 }
 
@@ -40,7 +40,7 @@ if (isset($_POST["logout"])) {
         );
     }
     session_destroy();
-    header("Location: ../index.php");
+    header("Location: ../Login.php");
     exit();
 }
 
@@ -59,7 +59,7 @@ if (isset($_POST["logout"])) {
 
         <header>
             <nav class="clientnnav">
-                <h1>JMCYK Client Page</h1>
+                <h1>BookSync Client Page</h1>
             </nav>
         </header>
 
