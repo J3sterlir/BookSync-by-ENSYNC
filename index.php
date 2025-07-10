@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/Landingpage.css">
   </head>
   <body>
+    
+<section class="anchorhome" id="home">
+</section>
+
     <nav class="menu-container">
     <!-- burger menu -->
     <input type="checkbox" aria-label="Toggle menu" />
@@ -22,8 +26,10 @@
 
     <!-- logo -->
       <div class="Title">
-          <h1>BOOKSYNC</h1>
-          <h3>By ENSYNC</h3>
+        <a class="TITLE" style="text-decoration: none;" href="index.php">
+            <h1>BOOKSYNC</h1>
+            <h3>By ENSYNC</h3>
+          </a>
       </div>
     <!-- menu items -->
     <div class="menu">
@@ -46,8 +52,8 @@
       </ul>
       <ul>
         <li>
-          <a href="Login.php">
-            Get Started
+          <a class="getstarted" href="Login.php">
+            <b>GET STARTED</b>
           </a>
         </li>
       </ul>
@@ -66,7 +72,7 @@
 </div>
 
 
-<section class="achorfeatures" id="Features">
+<section class="anchorfeatures" id="Features">
 </section>
 
 <div class="Title-box">

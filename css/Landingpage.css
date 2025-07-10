@@ -142,7 +142,7 @@ body h3{
 
 .menu-container a:hover {
   color: #3097ff8f;
-  text-decoration: underline;
+  text-decoration: overline;
 }
 
 .menu-container input {
@@ -324,8 +324,6 @@ body h3{
 .Feature-1 , .Feature-2, .Feature-3{
  font-family: 'Menbere', sans-serif;
 }
-.Feature-3{
-}
 .Feature-2, .Feature-3{
   padding: 1.5vh;
   border-color: #82B7E9;
@@ -334,8 +332,25 @@ body h3{
   border-radius: 35px;
 }
 
-.achorfeatures{
+.anchorfeatures{
   margin-top: 15%;
+}
+
+a.getstarted{
+border-style: solid;
+border-color: var(--Maintext-clr);
+color: var(--Maintext-clr);
+border-radius: 50px;
+padding: 10px;
+}
+a.getstarted:hover{
+border-style: solid;
+border-color: var(--Maintext-clr);
+color: #001528;
+background-color: var(--Maintext-clr);
+border-radius: 50px;
+padding: 10px;
+text-decoration: none;
 }
 
 
