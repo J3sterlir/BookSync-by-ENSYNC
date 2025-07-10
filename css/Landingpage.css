@@ -335,7 +335,9 @@ body h3{
 .anchorfeatures{
   margin-top: 15%;
 }
-
+.anchorabout{
+  margin-top: 1%;
+}
 a.getstarted{
 border-style: solid;
 border-color: var(--Maintext-clr);
@@ -353,10 +355,28 @@ padding: 10px;
 text-decoration: none;
 }
 footer{
-  margin-top: 125%;
+  margin-top: 35%;
 }
 
+.About-text{
+  font-family: 'Menbere', sans-serif;
+}
 
+.abouthero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+    margin-top: 75%;
+}
+.abouthero-container h1{
+  margin-left: 20rem;
+  font-size: 5rem;
+}
+.abouthero-container .text-content{
+  margin-right: 10rem;
+  font-size: 1.5rem;
+}
 
 
 @media (max-width: 768px) {

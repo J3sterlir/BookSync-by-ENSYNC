@@ -89,8 +89,26 @@
     <div class="Feature-3">Client Access For Transparency</div>
 </div>
 
-<div class="about-container">
-  <div class="text-about">  
+
+
+
+<div class="abouthero-container">
+    <div>
+      <h1><b>ABOUT</b></h1>
+    </div>
+    <div class="text-content">     
+<section class="anchorabout" id="About">
+</section>
+        <div class="About-text">
+          <article>
+            A <b>Web application</b> with an integrated database designed to assist Bookkeeping Services in sorting and managing receipts efficiently.
+            <br>
+            <br>
+            The system will allow employees to enter receipt details and automatically generate a summary report of the receipts, 
+            categorized by month. This will help in determining the total amount of receipts within specific time periods, which is crucial for preparing accurate tax returns.
+      </article>
+        </div>
+    </div>
 </div>
 
 <footer style="background-color:#2c3e50; color:#ecf0f1; padding:40px 20px; font-family: Arial, sans-serif;">
