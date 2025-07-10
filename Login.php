@@ -31,7 +31,7 @@ try {
     <header>
         <nav class="adminnav" style="padding-top: 20px; padding-bottom: 20px; background: #ffffff;
 background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 0.58) 100%); color: var(--background-color); width: auto; text-align: center;">
-            <h1>BookSync Management System</h1>
+            <a class="TITLE" style="text-decoration: none;color: #00116e;" href="index.php"><h1>BookSync Management System</h1></a>
         </nav>
     </header>
 

@@ -64,7 +64,7 @@ label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
-    color: #ffdada;
+    color: #ffffff;
     font-size: 14px;
     background: linear-gradient(90deg,rgba(36, 107, 173, 0.222) 55%, rgba(0, 45, 88, 0)90%);
     border-radius: 10px;
@@ -127,7 +127,7 @@ label a:hover {
     display: block;
     text-align: left;
     margin-bottom: 5px;
-    color: #ffdada;
+    color: #ffffff; 
     font-size: 14px;
     background: linear-gradient(90deg,rgba(36, 107, 173, 0.63) 55%, rgba(0, 45, 88, 0.021)98%);
     border-radius: 10px;
