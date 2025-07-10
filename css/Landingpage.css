@@ -317,7 +317,7 @@ body h3{
   align-items: center;
   justify-content:center;
   padding: 10vh;
-
+  box-shadow: 17px 25px 30.100000381469727px rgba(0, 0, 0, 0.25);
   gap: 200px;
   margin-top: -10vh;
 }
@@ -351,6 +351,9 @@ background-color: var(--Maintext-clr);
 border-radius: 50px;
 padding: 10px;
 text-decoration: none;
+}
+footer{
+  margin-top: 125%;
 }
 
 
