@@ -66,6 +66,23 @@
 </div>
 
 
+<section class="achorfeatures" id="Features">
+</section>
+
+<div class="Title-box">
+    <div class="Feature-1"><b>FEATURES</b></div>
+</div>
+
+<div class="Feature-box-1">
+    <div class="Feature-2">Manage Your Clients</div>
+    <div class="Feature-2">Manage Your Employees</div>
+    <div class="Feature-2">Organize Your Receipts</div>
+</div>
+<div class="Feature-box-2">
+    <div class="Feature-3">Automated Receipt Summary</div>
+    <div class="Feature-3">Client Access For Transparency</div>
+</div>
+
 
     <script src="" async defer></script>
   </body>

@@ -15,12 +15,15 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     background: linear-gradient(180deg, #001325 0%, #002D58 26%, #002D58 47%, #D9D9D9 100%);
     backdrop-filter: blur(8px);
     background-position: center;
     background-repeat: no-repeat;
-    /*background-size: cover;*/
     height: 470.93023255813955vh
 }
 
@@ -38,40 +41,37 @@ body{
 }*/
 .hero-container {
     display: flex;
-    align-items: center; /* Vertically centers items */
-    justify-content: space-between; /* Pushes items to opposite sides */
-    min-height: 0vh; /* Full viewport height */
-    padding: 0 3%; /* Adds some side padding */
+    align-items: center;
+    justify-content: space-between;    
+    min-height: 0vh;
+    padding: 0 3%; 
     position: relative;
-    overflow: hidden; /* Prevents LogoBG overflow issues */
+    overflow: hidden; 
 }
 
 /* LogoBG (Left Side) */
 .LogoBG {
-    width: 50%; /* Takes up 45% of container width */
-    height: 80vh; /* Adjust height as needed */
+    width: 50%; 
+    height: 80vh;
     transform:rotate(180deg);
     margin-left: -57px;
     background: linear-gradient(90deg, #82B7E9 0%, rgba(115, 115, 115, 0) 100%);
     box-shadow: 17px 18px 30px rgba(0, 0, 0, 0.25);
-    border-top-left-radius: 50vh; /* Creates half-circle */
+    border-top-left-radius: 50vh;
     border-bottom-left-radius: 50vh;
     display: flex;
-    /*align-items: center;*/
-    /*justify-content: center;*/
 }
 
-/* Text Content (Right Side) */
 .text-content {
-    width: 50%; /* Takes up 50% of container width */
-    color: var(--Maintext-clr); /* Uses your root variable */
-    text-align: right; /* Aligns text to the right */
+    width: 50%;
+    color: var(--Maintext-clr); 
+    text-align: right;
 }
 
 .Tagline {
     font-family: 'Menbere', sans-serif;
     font-weight: 800;
-    font-size: clamp(5.5rem, 5vw, 5.5rem); /* Responsive font scaling */
+    font-size: clamp(5.5rem, 5vw, 5.5rem);
     line-height: 1.2;
     margin-bottom: 3rem;
 }
@@ -91,14 +91,16 @@ body{
 }
 body h1{
     color: white; 
-    font-size: 25px; font-family: 
-    Menbere; font-weight: 700; 
+    font-size: 25px; 
+    font-family: 'Menbere', sans-serif;
+    font-weight: 700; 
     word-wrap: break-word
 }
 body h3{
     color: white; 
-    font-size: 15px; font-family: 
-    Menbere; font-weight: 700; 
+    font-size: 15px; 
+    font-family: 'Menbere', sans-serif;
+    font-weight: 700; 
     word-wrap: break-word
 }
 
@@ -110,9 +112,14 @@ body h3{
   color: #cdcdcd;
   padding: 20px;
   z-index: 1;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
   -webkit-user-select: none;
   user-select: none;
   box-sizing: border-box;
+  background: #001426;
+  background: linear-gradient(180deg,rgba(0, 20, 38, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .menu-logo {
@@ -129,11 +136,13 @@ body h3{
 .menu-container a {
   text-decoration: none;
   color: #af9d9d;
+  padding: 0.5rem;
   transition: color 0.3s ease;
 }
 
 .menu-container a:hover {
   color: #3097ff8f;
+  text-decoration: underline;
 }
 
 .menu-container input {
@@ -143,8 +152,8 @@ body h3{
   margin: 0;
   position: absolute;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -189,6 +198,7 @@ body h3{
 
 .menu ul {
   list-style: none;
+  font-family: 'Menbere', sans-serif;
 }
 
 .menu li {
@@ -276,6 +286,58 @@ body h3{
 .MAINLOGO{
     margin-left: 8%;
 }
+
+.Title-box{
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin-top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Maintext-clr);
+  font-size: 2.9rem;
+}
+.Feature-box-1{
+  width: auto;
+  height: 15px;
+  background-color: var(--Maintext-clr);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 10vh;
+  padding-top: 10vh;
+  gap: 300px;
+}
+.Feature-box-2{
+  width: auto;
+  height: auto;
+  background-color: var(--Maintext-clr);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 10vh;
+
+  gap: 200px;
+  margin-top: -10vh;
+}
+.Feature-1 , .Feature-2, .Feature-3{
+ font-family: 'Menbere', sans-serif;
+}
+.Feature-3{
+}
+.Feature-2, .Feature-3{
+  padding: 1.5vh;
+  border-color: #82B7E9;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 35px;
+}
+
+.achorfeatures{
+  margin-top: 15%;
+}
+
 
 @media (max-width: 768px) {
     .LogoBG {
