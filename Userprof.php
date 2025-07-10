@@ -53,7 +53,7 @@ include('Component/nav-head.php');
         <div class="container">
             <h3>Profile Details:</h3><br>
             <img class="Profileimg" src="https://jcrms.ct.ws/img/PROFILE.png" alt="Profile Image">
-            <p>First Name: <?php echo htmlspecialchars($_SESSION['first_name']); ?></p>
+            <p>Name: <?php echo htmlspecialchars($_SESSION['first_name']); ?></p>
             <p>User ID: <?php echo htmlspecialchars($_SESSION['user_id']); ?></p>
         </div>
         
