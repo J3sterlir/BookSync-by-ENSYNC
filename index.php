@@ -89,6 +89,10 @@
     <div class="Feature-3">Client Access For Transparency</div>
 </div>
 
+<div class="about-container">
+  <div class="text-about">  
+</div>
+
 <footer style="background-color:#2c3e50; color:#ecf0f1; padding:40px 20px; font-family: Arial, sans-serif;">
   <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between;">
 
